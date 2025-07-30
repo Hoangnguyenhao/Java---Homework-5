@@ -6,7 +6,7 @@ public class VF8 implements ICar {
     public VF8(String licensePlate) {
         this.licensePlate = licensePlate;
         this.wheels = 4;
-        this.seats = 7;
+        this.seats = 5;
     }
 
     public void showInfo() {
