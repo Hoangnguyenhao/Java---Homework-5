@@ -1,16 +1,22 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        ICar car1 = new VF5("51H-12345");
-        ICar car2 = new VF8("30A-67890");
+        ArrayList<ICar> cars = new ArrayList<>();
 
-        car1.showInfo();
-        car1.accelerate();
-        car1.brake();
+        ICar car1 = new VF5("30A-999.99");
+        ICar car2 = new VF8("29A-123.45");
 
-        System.out.println();
+        cars.add(car1);
+        cars.add(car2);
 
-        car2.showInfo();
-        car2.accelerate();
-        car2.brake();
+        System.out.println("\n--- Car Information ---");
+        for (ICar car : cars) {
+            car.showInfo();
+            car.accelerate();
+            car.brake();
+            System.out.println();
+        }
     }
 }
+
